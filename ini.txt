@@ -25,3 +25,6 @@ docker run --rm --env-file .env -p 8080:8080 rag-mod3-app
 FLY.IO
 
 fly auth login
+
+
+12:41
