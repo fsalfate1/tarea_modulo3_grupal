@@ -17,7 +17,7 @@ uvicorn app.server:app --reload
 
 DOCKER:
 
-docker build -t rag-mod3-app
+docker build -t rag-mod3-app .
 docker run --rm --env-file .env rag-mod3-app python rag_data_preparation.py
 docker run --rm --env-file .env -p 8080:8080 rag-mod3-app
 
@@ -25,9 +25,15 @@ docker run --rm --env-file .env -p 8080:8080 rag-mod3-app
 FLY.IO
 
 fly auth login
+***SOLO SI CAMBIE LOS SECRETS: fly secrets set OPENAI_API_KEY=... QDRANT_URL=... QDRANT_API_KEY=...
+fly deploy
 
 
-12:41
+
+
+
+
+
 
 
 actualizar git:
